@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5DC"
+    tools:context=".KayitActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/kayitBaslik"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="monospace"
+            android:text="YENI HESAP OLUSTUR"
+            android:textColor="#000000"
+            android:textSize="26dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewAd"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="monospace"
+                android:text="Ad: "
+                android:textColor="#000000"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/editTextAd"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:textSize="12dp"
+                android:hint="Ad"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewSoyad"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="monospace"
+                android:text="Soyad: "
+                android:textColor="#000000"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/editTextSoyad"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:textSize="12dp"
+                android:hint="Soyad"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewMail"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="monospace"
+                android:text="E-posta: "
+                android:textColor="#000000"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/editTextMail"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress"
+                android:textSize="12dp"
+                android:hint="Email"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewSifre"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="monospace"
+                android:text="Parola: "
+                android:textColor="#000000"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/editTextSifre"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:textSize="12dp"
+                android:hint="Parola"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewDogumTarihi"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="monospace"
+                android:text="Dogum Tarihi: "
+                android:textColor="#000000"
+                android:textSize="23dp" />
+
+            <TextView
+                android:id="@+id/textViewDogumTarihiSec"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="35dp"
+                android:fontFamily="monospace"
+                android:text="Dokun"
+                android:textColor="#ff0000"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="35dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewBoy"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="monospace"
+                    android:text="Boy(cm)"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editTextBoy"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:inputType="number"
+                    android:hint="Boy"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewKilo"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="monospace"
+                    android:text="Kilo(kg)"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editTextKilo"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:inputType="number"
+                    android:hint="Kilo"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="45dp">
+
+            <Button
+                android:id="@+id/buttonUyeOl"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/uyebutonu"
+                android:fontFamily="monospace"
+                android:text="UYE OL"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

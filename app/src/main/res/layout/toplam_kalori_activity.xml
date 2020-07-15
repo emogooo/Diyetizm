@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ekran_temasi2"
+    tools:context=".ToplamKaloriActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/imageAramaFotografi"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:background="@drawable/ara"/>
+
+        <TextView
+            android:id="@+id/textViewToplamNetKalori"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="Toplam Kalori Değişimi: 0 kcal"
+            android:textColor="#ce0404"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="35dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:fontFamily="monospace"
+                    android:text="Alınan Kalori"
+                    android:gravity="center"
+                    android:textColor="#504949"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/textViewToplamAlinanKalori"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:fontFamily="monospace"
+                    android:text="0 kcal"
+                    android:textColor="#504949"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:fontFamily="monospace"
+                    android:text="Verilen Kalori"
+                    android:textColor="#504949"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/textViewToplamVerilenKalori"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:fontFamily="monospace"
+                    android:text="0 kcal"
+                    android:gravity="center"
+                    android:textColor="#504949"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewToplamProtein"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="monospace"
+                android:text="Protein: 0 g"
+                android:textColor="#01b720"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textViewToplamYag"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="monospace"
+                android:text="Yag: 0 g"
+                android:textColor="#9da700"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/textViewToplamKarbonhidrat"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="monospace"
+                android:text="Karbonhidrat: 0 g"
+                android:textColor="#774d0e"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewOrtalamaVerilenKalori"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:fontFamily="monospace"
+                android:text="Ortalama Verilen Kalori (Günlük): 0 kcal"
+                android:textColor="#504949"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewOrtalamaAlinanKalori"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:fontFamily="monospace"
+                android:text="Ortalama Alınan Kalori (Günlük): 0 kcal"
+                android:textColor="#504949"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewOrtalamaProtein"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:fontFamily="monospace"
+                android:text="Ortalama Alınan Protein (Günlük): 0 g"
+                android:textColor="#01b720"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewOrtalamaYag"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:fontFamily="monospace"
+                android:text="Ortalama Alınan Yag (Günlük): 0 g"
+                android:textColor="#9da700"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewOrtalamaKarbonhidrat"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:fontFamily="monospace"
+                android:text="Ortalama Alınan Karbonhidrat (Günlük): 0 g"
+                android:textColor="#774d0e"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

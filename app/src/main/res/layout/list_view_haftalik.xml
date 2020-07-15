@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="7dp">
+
+            <TextView
+                android:id="@+id/textViewListHaftalikTarih"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="Net Kalori"
+                    android:textColor="#ce0404"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/textViewListHaftalikNetKalori"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:textColor="#ce0404"
+                    android:textSize="18dp"
+                    android:text="1000 kcal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="Alınan Kalori"
+                    android:textColor="#504949"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/textViewListHaftalikAlinanKalori"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:textColor="#504949"
+                    android:textSize="18dp"
+                    android:text="1000 kcal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="Verilen Kalori"
+                    android:textColor="#504949"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/textViewListHaftalikVerilenKalori"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:textColor="#504949"
+                    android:textSize="18dp"
+                    android:text="1000 kcal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="40dp"
+                        android:fontFamily="monospace"
+                        android:text="P:"
+                        android:textColor="#01b720"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/textViewListHaftalikProtein"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:fontFamily="monospace"
+                        android:textColor="#01b720"
+                        android:textSize="15dp"
+                        android:text="10000 g"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="monospace"
+                        android:text="Y:"
+                        android:textColor="#9da700"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/textViewListHaftalikYag"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="monospace"
+                        android:textColor="#9da700"
+                        android:textSize="15dp"
+                        android:text="10000 g"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="monospace"
+                        android:text="K:"
+                        android:textColor="#774d0e"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/textViewListHaftalikKarbonhidrat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="monospace"
+                        android:textColor="#774d0e"
+                        android:textSize="15dp"
+                        android:text="10000 g"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
