@@ -1,6 +1,7 @@
 package com.example.btdev;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,6 +58,10 @@ public class TarihYemekAdaptor extends BaseAdapter {
         yag.setText("Y: " + yemekler.get(position).getYag() + " g");
         karbonhidrat.setText("K: " + yemekler.get(position).getKarbonhidrat() + " g");
         Picasso.get().load(yemekler.get(position).getResimUrl()).fit().centerCrop().into(img);
+
+        if (position % 2 == 1) {
+            yemeklerView.setBackgroundColor(Color.argb(15,0,0,255));
+        }
 
         return yemeklerView;
     }

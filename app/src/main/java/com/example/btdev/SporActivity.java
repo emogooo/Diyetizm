@@ -84,7 +84,12 @@ public class SporActivity extends AppCompatActivity {
                     sporlar.add(dS.getValue(Spor.class));
                 }
                 sporSec();
-                bilgiYaz();
+                if (secilenSporlar.size() != 0) {
+                    bilgiYaz();
+                }else {
+                    Toast.makeText(SporActivity.this, "Yaptığınız egzersizleri eklemek için sağa kaydırın!",Toast.LENGTH_LONG).show();
+                }
+
             }
 
             @Override

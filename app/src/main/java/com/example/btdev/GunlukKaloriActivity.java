@@ -80,6 +80,12 @@ public class GunlukKaloriActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         kullanici = auth.getCurrentUser();
         ePosta = kullanici.getEmail();
+
+        if (kullanici == null) {
+            Intent i = new Intent(GunlukKaloriActivity.this, GirisActivity.class);
+            startActivity(i);
+            finish();
+        }
     }
 
     private void tarihBul() {
@@ -98,7 +104,7 @@ public class GunlukKaloriActivity extends AppCompatActivity {
         liste.setAdapter(adaptor);
     }
 
-    private void secilenOguneGit(int position){
+    private void secilenOguneGit(int position) {
         Intent i = new Intent(getApplicationContext(), OgunDetay.class);
         i.putExtra("yemek", ogunler.get(position));
         i.putExtra("email", ePosta);
@@ -125,7 +131,7 @@ public class GunlukKaloriActivity extends AppCompatActivity {
         yag = 0;
         kar = 0;
         for (int i = 0; i < yemekler.size(); i++) {
-            if (yemekler.get(i).getTarih().equalsIgnoreCase(tarih) && yemekler.get(i).getKullanici().equalsIgnoreCase(ePosta)) {
+            if (yemekler.get(i).getTarih().equalsIgnoreCase(tarih)) {
                 aKal += yemekler.get(i).getKalori();
                 pro += yemekler.get(i).getProtein();
                 yag += yemekler.get(i).getYag();
@@ -145,7 +151,7 @@ public class GunlukKaloriActivity extends AppCompatActivity {
 
     private void veriAl() {
         dRef = FirebaseDatabase.getInstance().getReference().child("YemekBilgisi");
-        dRef.addValueEventListener(new ValueEventListener() {
+        dRef.orderByChild("kullanici").equalTo(ePosta).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dS : snapshot.getChildren()) {

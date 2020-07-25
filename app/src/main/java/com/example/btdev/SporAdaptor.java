@@ -1,6 +1,7 @@
 package com.example.btdev;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,6 +47,10 @@ public class SporAdaptor extends BaseAdapter {
         ad.setText(sporlar.get(position).getIsim());
         kacDkYapildigi.setText(sporlar.get(position).getYapilanDakika() + " dk");
         yakilanKalori.setText(sporlar.get(position).getYakilanKalori() + " kcal");
+
+        if (position % 2 == 1) {
+            sporlarView.setBackgroundColor(Color.argb(15,0,0,255));
+        }
 
         return sporlarView;
     }

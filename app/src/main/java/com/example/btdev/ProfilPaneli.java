@@ -27,7 +27,7 @@ public class ProfilPaneli extends AppCompatActivity {
     private DatabaseReference dRef;
     private String ePosta;
     private KullaniciBilgisi k;
-    private TextView profil, ad, soyad, kilo, boy, eposta, dt;
+    private TextView ad, soyad, kilo, boy, eposta, dt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,6 @@ public class ProfilPaneli extends AppCompatActivity {
     }
 
     private void init() {
-        profil = findViewById(R.id.textViewProfil);
         ad = findViewById(R.id.textViewProfilAd2);
         soyad = findViewById(R.id.textViewProfilSoyad2);
         kilo = findViewById(R.id.textViewProfilKilo2);

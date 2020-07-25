@@ -1,6 +1,7 @@
 package com.example.btdev;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,6 +56,10 @@ public class AylikAdaptor extends BaseAdapter {
         textViewProtein.setText(aylikBilgiler.get(position).getProtein() + " g");
         textViewYag.setText(aylikBilgiler.get(position).getYag() + " g");
         textViewKarbonhidrat.setText(aylikBilgiler.get(position).getKarbonhidrat() + " g");
+
+        if (position % 2 == 1) {
+            aylikView.setBackgroundColor(Color.argb(15,0,0,255));
+        }
 
         return aylikView;
     }
