@@ -79,7 +79,7 @@ public class OgunDetay extends AppCompatActivity {
             yemekAdaptor = new YemekAdaptor(OgunDetay.this, secilenYemekler);
             yemekListesi.setAdapter(yemekAdaptor);
         } else {
-            Toast.makeText(this, "Yemek eklemek için sola kaydırın!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Yemek eklemek için sağa kaydırın!", Toast.LENGTH_LONG).show();
         }
 
     }
@@ -123,6 +123,8 @@ public class OgunDetay extends AppCompatActivity {
     @Override
     public void finish() {
         super.finish();
+        Intent i = new Intent(OgunDetay.this, GunlukKaloriActivity.class);
+        startActivity(i);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
@@ -134,9 +136,6 @@ public class OgunDetay extends AppCompatActivity {
             case MotionEvent.ACTION_UP:
                 x2 = touchEvent.getX();
                 if (x1 < x2) {
-                    Intent i = new Intent(OgunDetay.this, GunlukKaloriActivity.class);
-                    startActivity(i);
-                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                     finish();
                 }
                 if (x1 > x2) {

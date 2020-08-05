@@ -80,12 +80,6 @@ public class GunlukKaloriActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         kullanici = auth.getCurrentUser();
         ePosta = kullanici.getEmail();
-
-        if (kullanici == null) {
-            Intent i = new Intent(GunlukKaloriActivity.this, GirisActivity.class);
-            startActivity(i);
-            finish();
-        }
     }
 
     private void tarihBul() {
@@ -109,8 +103,8 @@ public class GunlukKaloriActivity extends AppCompatActivity {
         i.putExtra("yemek", ogunler.get(position));
         i.putExtra("email", ePosta);
         startActivity(i);
-        finish();
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        finish();
     }
 
     private void yemekBilgisiYaz() {
@@ -131,7 +125,7 @@ public class GunlukKaloriActivity extends AppCompatActivity {
         yag = 0;
         kar = 0;
         for (int i = 0; i < yemekler.size(); i++) {
-            if (yemekler.get(i).getTarih().equalsIgnoreCase(tarih)) {
+            if (yemekler.get(i).getTarih().equalsIgnoreCase(tarih) && yemekler.get(i).getKullanici().equalsIgnoreCase(ePosta)) {
                 aKal += yemekler.get(i).getKalori();
                 pro += yemekler.get(i).getProtein();
                 yag += yemekler.get(i).getYag();
@@ -151,15 +145,12 @@ public class GunlukKaloriActivity extends AppCompatActivity {
 
     private void veriAl() {
         dRef = FirebaseDatabase.getInstance().getReference().child("YemekBilgisi");
-        dRef.orderByChild("kullanici").equalTo(ePosta).addValueEventListener(new ValueEventListener() {
+        dRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dS : snapshot.getChildren()) {
                     yemekler.add(dS.getValue(Yemek.class));
                 }
-
-                yemekSec();
-                yemekBilgisiYaz();
             }
 
             @Override
@@ -174,7 +165,8 @@ public class GunlukKaloriActivity extends AppCompatActivity {
                 for (DataSnapshot dS : snapshot.getChildren()) {
                     sporlar.add(dS.getValue(Spor.class));
                 }
-
+                yemekSec();
+                yemekBilgisiYaz();
                 sporSec();
                 sporBilgisiYaz();
             }

@@ -87,7 +87,7 @@ public class SporActivity extends AppCompatActivity {
                 if (secilenSporlar.size() != 0) {
                     bilgiYaz();
                 }else {
-                    Toast.makeText(SporActivity.this, "Yaptığınız egzersizleri eklemek için sağa kaydırın!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(SporActivity.this, "Yaptığınız egzersizleri eklemek için sola kaydırın!",Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -112,12 +112,6 @@ public class SporActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void finish() {
-        super.finish();
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
-    }
-
     public boolean onTouchEvent(MotionEvent touchEvent) {
         switch (touchEvent.getAction()) {
             case MotionEvent.ACTION_DOWN:
@@ -133,6 +127,7 @@ public class SporActivity extends AppCompatActivity {
                     Intent i = new Intent(SporActivity.this, SporKayitActivity.class);
                     i.putExtra("email", ePosta);
                     startActivity(i);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                     finish();
                 }
         }
